@@ -1,0 +1,31 @@
+package com.chaitya.ecommerce.utils;
+
+import com.chaitya.ecommerce.controllers.CustomerRequest;
+import com.chaitya.ecommerce.controllers.CustomerResponse;
+import com.chaitya.ecommerce.customer.Customer;
+import org.springframework.stereotype.Service;
+
+@Service
+public class CustomerMapper {
+    public Customer toCustomer(CustomerRequest request) {
+        if(request == null) return null;
+
+        return Customer.builder()
+                .id(request.id())
+                .firstName(request.firstName())
+                .lastName(request.lastName())
+                .email(request.email())
+                .address(request.address())
+                .build();
+    }
+
+    public CustomerResponse fromCustomer(Customer customer) {
+        return new CustomerResponse(
+                customer.getId(),
+                customer.getFirstName(),
+                customer.getLastName(),
+                customer.getEmail(),
+                customer.getAddress()
+        );
+    }
+}
