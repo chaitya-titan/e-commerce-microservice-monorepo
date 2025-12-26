@@ -4,7 +4,6 @@ import com.chaitya.ecommerce.customer.CustomerClient;
 import com.chaitya.ecommerce.exceptions.BusinessException;
 import com.chaitya.ecommerce.kafka.OrderConfirmation;
 import com.chaitya.ecommerce.kafka.OrderProducer;
-import com.chaitya.ecommerce.orderline.OrderLine;
 import com.chaitya.ecommerce.orderline.OrderLineRequest;
 import com.chaitya.ecommerce.orderline.OrderLineService;
 import com.chaitya.ecommerce.product.ProductClient;
