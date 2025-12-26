@@ -6,10 +6,10 @@ import org.springframework.data.mongodb.core.mapping.Document;
 
 @AllArgsConstructor
 @NoArgsConstructor
-@Builder
 @Getter
 @Setter
 @Document
+@Builder
 public class Customer {
 
     @Id

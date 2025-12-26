@@ -3,9 +3,9 @@ package com.chaitya.ecommerce.utils;
 import com.chaitya.ecommerce.controllers.CustomerRequest;
 import com.chaitya.ecommerce.controllers.CustomerResponse;
 import com.chaitya.ecommerce.customer.Customer;
-import org.springframework.stereotype.Service;
+import org.springframework.stereotype.Component;
 
-@Service
+@Component
 public class CustomerMapper {
     public Customer toCustomer(CustomerRequest request) {
         if(request == null) return null;
