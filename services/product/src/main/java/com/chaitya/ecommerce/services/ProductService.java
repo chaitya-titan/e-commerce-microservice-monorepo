@@ -7,6 +7,7 @@ import com.chaitya.ecommerce.product.ProductRequest;
 import com.chaitya.ecommerce.product.ProductResponse;
 import com.chaitya.ecommerce.repositories.ProductRepository;
 import jakarta.persistence.EntityNotFoundException;
+import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
@@ -28,6 +29,7 @@ public class ProductService {
     }
 
 
+    @Transactional
     public List<ProductPurchaseResponse> purchaseProducts(List<ProductPurchaseRequest> request) {
         var productIds = request
                 .stream()
