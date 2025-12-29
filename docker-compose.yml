@@ -1,7 +1,7 @@
 services:
   postgres:
     container_name: ms_pg_sql
-    image: postgres
+    image: postgres:17
     environment:
       POSTGRES_USER: test
       POSTGRES_PASSWORD: test
