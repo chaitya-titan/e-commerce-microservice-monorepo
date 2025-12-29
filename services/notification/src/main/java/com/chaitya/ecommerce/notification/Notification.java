@@ -13,7 +13,7 @@ import java.time.LocalDateTime;
 @Builder
 @Getter
 @Setter
-@Document
+@Document(collection = "notifications")
 public class Notification {
 
     @Id

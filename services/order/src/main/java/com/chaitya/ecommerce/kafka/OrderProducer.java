@@ -2,6 +2,7 @@ package com.chaitya.ecommerce.kafka;
 
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.context.annotation.Bean;
 import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.messaging.Message;
 import org.springframework.messaging.support.MessageBuilder;
@@ -14,7 +15,7 @@ import static org.springframework.kafka.support.KafkaHeaders.TOPIC;
 @Slf4j
 public class OrderProducer {
 
-    private final KafkaTemplate<String, OrderConfirmation> kafkaTemplate;
+    private final KafkaTemplate<String, Object> kafkaTemplate;
 
     public void sendOrderConfirmation(OrderConfirmation orderConfirmation) {
         log.info("Sending order confirmation for order");
